@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lênia — Avatar 3D (Protótipo)</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- Three.js via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Lênia — Protótipo (avatar 3D)</h1>
+
+    <div id="canvas-box">
+      <canvas id="avatar-canvas"></canvas>
+    </div>
+
+    <div class="controls">
+      <input id="question" type="text" placeholder="Pergunte algo sobre semiótica / pós-humano..." />
+      <button id="askBtn">Perguntar à Lênia</button>
+    </div>
+
+    <div id="responseBox" class="response-box" hidden>
+      <h3>Resposta</h3>
+      <p id="responseText"></p>
+      <p class="meta" id="responseMeta"></p>
+    </div>
+
+    <p class="note">Renderização cliente (Three.js) + Web Speech API para fala.</p>
+  </div>
+
+  <script src="/static/js/avatar.js"></script>
+</body>
+</html>
