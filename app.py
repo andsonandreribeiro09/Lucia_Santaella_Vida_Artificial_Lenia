@@ -1,6 +1,6 @@
-# app.py
 from flask import Flask, render_template, request, jsonify
 import time
+import os
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
@@ -36,4 +36,6 @@ def ask():
     return jsonify(response)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    port = int(os.environ.get("PORT", 8080))  # Usa a porta do ambiente ou 8080 como fallback
+    app.run(host="0.0.0.0", port=port, debug=False)
+
