@@ -35,5 +35,6 @@ def ask():
     response = notebooklm_query(question)
     return jsonify(response)
 
-
+if __name__ == "__main__":
+    app.run( )
 
