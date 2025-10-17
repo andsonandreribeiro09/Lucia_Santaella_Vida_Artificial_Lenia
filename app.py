@@ -35,7 +35,6 @@ def ask():
     response = notebooklm_query(question)
     return jsonify(response)
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))  # Usa a porta do ambiente ou 8080 como fallback
-    app.run(host="0.0.0.0", port=port, debug=False)
+if __name__ == '__main__':
+    dash_app.run_server(debug=True)
 
